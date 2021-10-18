@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.sondouni.ch07.BookPersonActivity;
+
 public class MenuActivity extends AppCompatActivity {
 
     @Override
@@ -30,6 +32,10 @@ public class MenuActivity extends AppCompatActivity {
             case R.id.menuBtn3:
                 c=ConstraintActivity.class;
                 break;
+            case R.id.menuBtn4:
+                c=WriteActivity.class;
+            case R.id.menuBtn5:
+                c= BookPersonActivity.class;
         }
 
         Intent intent = new Intent(this,c);

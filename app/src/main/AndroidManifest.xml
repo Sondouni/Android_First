@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sondouni">
-
+        <activity
+            android:name=".ch07.BookPersonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WriteActivity"
+            android:exported="false" />
         <activity
             android:name=".MenuActivity"
             android:exported="true">
@@ -20,14 +28,14 @@
             </intent-filter>
         </activity>
         <activity
-        android:name=".LinearActivity"
-        android:exported="true"></activity>
+            android:name=".LinearActivity"
+            android:exported="true" />
         <activity
             android:name=".ConstraintActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
