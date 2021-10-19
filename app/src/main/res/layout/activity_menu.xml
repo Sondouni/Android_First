@@ -27,7 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="moveToActivity"
-            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_weight="1.5"
             android:text="Constraint"/>
 
         <Button
@@ -53,5 +54,18 @@
             android:layout_height="wrap_content"
             android:onClick="moveToActivity"
             android:text="Person"/>
+
+        <Button
+            android:id="@+id/menuBtn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="moveToActivity"
+            android:text="Image"/>
+        <Button
+            android:id="@+id/menuBtn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="moveToActivity"
+            android:text="Picsum"/>
     </TableRow>
 </TableLayout>

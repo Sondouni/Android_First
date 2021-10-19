@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.sondouni.ch07.BookPersonActivity;
+import com.example.sondouni.picsum.PicsunActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -34,8 +35,16 @@ public class MenuActivity extends AppCompatActivity {
                 break;
             case R.id.menuBtn4:
                 c=WriteActivity.class;
+                break;
             case R.id.menuBtn5:
                 c= BookPersonActivity.class;
+                break;
+            case R.id.menuBtn6:
+                c=ImageViewActivity.class;
+                break;
+            case R.id.menuBtn7:
+                c= PicsunActivity.class;
+                break;
         }
 
         Intent intent = new Intent(this,c);

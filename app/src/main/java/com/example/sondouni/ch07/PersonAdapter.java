@@ -1,5 +1,6 @@
 package com.example.sondouni.ch07;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sondouni.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +35,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.MyViewHold
 
         holder.setItem(items.get(position));
     }
-
+//이 노트북은 이제 제껍니다.
     @Override
     public int getItemCount() {
         return items.size();
@@ -45,7 +47,16 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.MyViewHold
 
         public MyViewHolder(View v){
             super(v);
-
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //클로저 (closure) : 없어져야하거나 값을 알지못하는 변수인데 가져오는것
+                    String name = tvName.getText().toString();
+                    String age = tvAge.getText().toString();
+                    Log.i("myLog","MyViewHolderConstructor");
+                    Snackbar.make(v,name+", "+age,Snackbar.LENGTH_SHORT).show();
+                }
+            });
             tvName = v.findViewById(R.id.tvName);//레이아웃파일 만들어주면 에러없어짐
             tvAge = v.findViewById(R.id.tvAge);
         }
