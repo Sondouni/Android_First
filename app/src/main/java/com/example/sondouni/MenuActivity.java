@@ -7,11 +7,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.sondouni.ch07.BookPersonActivity;
-import com.example.sondouni.picsum.PicsunActivity;
+import com.example.sondouni.picsum.PicsumActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -43,7 +42,7 @@ public class MenuActivity extends AppCompatActivity {
                 c=ImageViewActivity.class;
                 break;
             case R.id.menuBtn7:
-                c= PicsunActivity.class;
+                c= PicsumActivity.class;
                 break;
         }
 

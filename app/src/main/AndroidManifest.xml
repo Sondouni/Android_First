@@ -12,7 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sondouni">
         <activity
-            android:name=".picsum.PicsunActivity"
+            android:name="ddazua.DAlertActivity"
+            android:exported="false" />
+        <activity
+            android:name="ddazua.DDialogActivity"
+            android:exported="false" />
+        <activity
+            android:name="ddazua.DClickActivity"
+            android:exported="false" />
+        <activity
+            android:name=".picsum.PicsumActivity"
             android:exported="false" />
         <activity
             android:name=".ImageViewActivity"
@@ -22,7 +31,14 @@
             android:exported="false" />
         <activity
             android:name="ddazua.DMenuActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            />
+        </activity>
         <activity
             android:name=".ch07.BookPersonActivity"
             android:exported="false" />

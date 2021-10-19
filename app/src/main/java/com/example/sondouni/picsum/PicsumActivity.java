@@ -15,12 +15,12 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class PicsunActivity extends AppCompatActivity {
+public class PicsumActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_picsun);
+        setContentView(R.layout.activity_picsum);
         network();
 
     }
