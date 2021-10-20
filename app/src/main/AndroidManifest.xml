@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sondouni">
         <activity
+            android:name="ddazua.PreferencActivity"
+            android:exported="false" />
+        <activity
+            android:name="ddazua.DdIntentSubSActivity"
+            android:exported="false" />
+        <activity
+            android:name="ddazua.BundleActivity"
+            android:exported="false" />
+        <activity
+            android:name="ddazua.DHandlerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ch10.DailyBoxOfficeActivity"
             android:exported="false" />
         <activity
