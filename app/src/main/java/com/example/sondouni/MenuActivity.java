@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.sondouni.ch07.BookPersonActivity;
+import com.example.sondouni.ch10.DailyBoxOfficeActivity;
 import com.example.sondouni.picsum.PicsumActivity;
 
 public class MenuActivity extends AppCompatActivity {
@@ -43,6 +44,9 @@ public class MenuActivity extends AppCompatActivity {
                 break;
             case R.id.menuBtn7:
                 c= PicsumActivity.class;
+                break;
+            case R.id.menuBtn8:
+                c= DailyBoxOfficeActivity.class;
                 break;
         }
 

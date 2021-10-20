@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sondouni">
         <activity
+            android:name=".ch10.DailyBoxOfficeActivity"
+            android:exported="false" />
+        <activity
+            android:name="ddazua.DIntentSubActivity"
+            android:exported="false" />
+        <activity
+            android:name="ddazua.DIntentActivity"
+            android:exported="false" />
+        <activity
             android:name="ddazua.DAlertActivity"
             android:exported="false" />
         <activity
@@ -31,12 +40,7 @@
             android:exported="false" />
         <activity
             android:name="ddazua.DMenuActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
             />
         </activity>
         <activity

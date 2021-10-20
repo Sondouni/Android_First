@@ -56,9 +56,9 @@ public class DMenuActivity extends AppCompatActivity {
         int id = v.getId();
         Class c = null;
         if(id == R.id.mBtn1){
-            c = DTouchActivity.class;
+            c = DAlertActivity.class;
         }else if(id == R.id.mBtn2){
-            c = DClickActivity.class;
+            c = DIntentActivity.class;
         }else if(id == R.id.mBtn3){
             c = DDialogActivity.class;
         }
