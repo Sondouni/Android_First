@@ -4,26 +4,12 @@ import android.widget.Toast;
 
 import com.example.sondouni.ch07.BookPersonActivity;
 
+import java.text.DecimalFormat;
+
 public class Utils {
     public static int parseStringToInt(String val){
-        int intVal = 0;
-        try{
-            intVal = Integer.parseInt(val);
-        }catch (Exception e){
-            e.printStackTrace();
-
-        }finally {
-
-        }
-        return intVal;
-
-
-
-
-
-
-
-        /*
+        return parseStringToInt(val,0);
+  /*
         //예외처리
         try{
 
@@ -36,4 +22,23 @@ public class Utils {
 
 
     }
+    public static int parseStringToInt(String val, int defVal){
+        try{
+            return Integer.parseInt(val);
+        }catch (Exception e) {
+            e.printStackTrace();
+            return defVal;
+        }
+    }
+    public static String getNumberComma(String val){
+//        int amount = Integer.parseInt(val);
+//        DecimalFormat df = new DecimalFormat("###,###");
+//        return df.format(amount);
+        return getNumberComma(parseStringToInt(val));
+    };
+    public static String getNumberComma(int val){
+        return String.format("%,d",val);
+    };
+
+
 }

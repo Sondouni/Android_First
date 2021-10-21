@@ -12,49 +12,53 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sondouni">
         <activity
-            android:name="ddazua.PreferencActivity"
+            android:name=".ch10.WeeklyBoxOfficeActivity"
             android:exported="false" />
-        <activity
-            android:name="ddazua.DdIntentSubSActivity"
-            android:exported="false" />
-        <activity
-            android:name="ddazua.BundleActivity"
-            android:exported="false" />
-        <activity
-            android:name="ddazua.DHandlerActivity"
-            android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name="ddazua.CameraResultActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name="ddazua.PreferencActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name="ddazua.DdIntentSubSActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name="ddazua.BundleActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name="ddazua.DHandlerActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".ch10.DailyBoxOfficeActivity"
-            android:exported="false" />
-        <activity
-            android:name="ddazua.DIntentSubActivity"
-            android:exported="false" />
-        <activity
-            android:name="ddazua.DIntentActivity"
-            android:exported="false" />
-        <activity
-            android:name="ddazua.DAlertActivity"
-            android:exported="false" />
-        <activity
-            android:name="ddazua.DDialogActivity"
-            android:exported="false" />
-        <activity
-            android:name="ddazua.DClickActivity"
-            android:exported="false" />
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name="ddazua.DIntentSubActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name="ddazua.DIntentActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name="ddazua.DAlertActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name="ddazua.DDialogActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name="ddazua.DClickActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".picsum.PicsumActivity"
             android:exported="false" />
         <activity
             android:name=".ImageViewActivity"
-            android:exported="false" />
-        <activity
-            android:name="ddazua.DTouchActivity"
-            android:exported="false" />
-        <activity
-            android:name="ddazua.DMenuActivity"
-            android:exported="false">
-            />
-        </activity>
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name="ddazua.DTouchActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name="ddazua.DMenuActivity" -->
+        <!-- android:exported="false"> -->
+        <!-- /> -->
+        <!-- </activity> -->
         <activity
             android:name=".ch07.BookPersonActivity"
             android:exported="false" />

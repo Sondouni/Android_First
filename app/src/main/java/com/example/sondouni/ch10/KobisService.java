@@ -10,4 +10,7 @@ public interface KobisService {
     Call<BoxOfficeResultBodyVO> boxofficeSerchDailyBoxOfficeList(@Query("key") String key
                 ,@Query("targetDt") String targetDt);
 
+    @GET("boxoffice/searchWeeklyBoxOfficeList.json")
+    Call<BoxOfficeResultBodyVO> boxofficeSerchWeeklyBoxOfficeList(@Query("key") String key
+            ,@Query("targetDt") String targetDt,@Query("weekGb") String weekGb);
 }
