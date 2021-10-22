@@ -12,8 +12,9 @@ import android.widget.Toast;
 
 import com.example.sondouni.ch07.BookPersonActivity;
 import com.example.sondouni.ch10.DailyBoxOfficeActivity;
+import com.example.sondouni.ch10.MovieListActivity;
+import com.example.sondouni.ch10.TestWDActivity;
 import com.example.sondouni.ch10.WeeklyBoxOfficeActivity;
-import com.example.sondouni.ch10.WeeklyBoxOfficeVO;
 import com.example.sondouni.picsum.PicsumActivity;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -56,7 +57,7 @@ public class MenuActivity extends AppCompatActivity {
                 c= WeeklyBoxOfficeActivity.class;
                 break;
             case R.id.menuBtn10:
-                c= WeeklyBoxOfficeActivity.class;
+                c= MovieListActivity.class;
                 break;
         }
         if(c==null){

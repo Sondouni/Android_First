@@ -12,9 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sondouni">
         <activity
-            android:name=".ch10.WeeklyBoxOfficeActivity"
+            android:name=".ch10.MovieListActivity"
             android:exported="false" />
-        <!-- <activity -->
+        <activity
+            android:name=".ch10.TestWDActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ch10.WeeklyBoxOfficeActivity"
+            android:exported="false" /> <!-- <activity -->
         <!-- android:name="ddazua.CameraResultActivity" -->
         <!-- android:exported="false" /> -->
         <!-- <activity -->

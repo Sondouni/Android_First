@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.DatePicker;
 
 import com.example.sondouni.R;
+import com.example.sondouni.ch10.boxofficemodel.BoxOfficeResultBodyVO;
+import com.example.sondouni.ch10.boxofficemodel.BoxOfficeResultVO;
+import com.example.sondouni.ch10.boxofficemodel.WeeklyBoxOfficeVO;
 
 import java.util.List;
 

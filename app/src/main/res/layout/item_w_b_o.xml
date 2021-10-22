@@ -39,8 +39,8 @@
         android:id="@+id/tvRank"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tvAudienceCnt" />
@@ -51,9 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvRank" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="17dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

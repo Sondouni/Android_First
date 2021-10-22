@@ -1,4 +1,4 @@
-package com.example.sondouni.ch10;
+package com.example.sondouni.ch10.boxofficemodel;
 
 public class WeeklyBoxOfficeVO {
     private String movieNm;

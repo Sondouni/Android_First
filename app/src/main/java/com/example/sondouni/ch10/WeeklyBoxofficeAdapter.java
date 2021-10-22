@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sondouni.R;
 import com.example.sondouni.Utils;
+import com.example.sondouni.ch10.boxofficemodel.WeeklyBoxOfficeVO;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class WeeklyBoxofficeAdapter extends RecyclerView.Adapter<WeeklyBoxoffice
     public void setList(List<WeeklyBoxOfficeVO> list){this.list = list;}
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public WeeklyBoxofficeAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.i("myLog","뷰홀더생성");
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View v = inflater.inflate(R.layout.item_w_b_o,parent,false);
@@ -27,7 +28,7 @@ public class WeeklyBoxofficeAdapter extends RecyclerView.Adapter<WeeklyBoxoffice
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull WeeklyBoxofficeAdapter.MyViewHolder holder, int position) {
         Log.i("myLog","홀더에 값넣기");
         holder.setItem(list.get(position));
     }
@@ -50,8 +51,8 @@ public class WeeklyBoxofficeAdapter extends RecyclerView.Adapter<WeeklyBoxoffice
         public void setItem(WeeklyBoxOfficeVO vo){
             Log.i("myLog","데이터가져오기");
             tvTitle.setText(vo.getMovieNm());
-            tvRank.setText(vo.getRank());
-            tvDate.setText(vo.getOpenDt());
+            tvRank.setText("Rank"+vo.getRank());
+            tvDate.setText("release date: "+vo.getOpenDt());
             tvAudienceCnt.setText(Utils.getNumberComma(vo.getAudiCnt())+"명");
 
         }

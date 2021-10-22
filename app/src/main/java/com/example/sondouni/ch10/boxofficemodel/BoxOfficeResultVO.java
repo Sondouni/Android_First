@@ -1,4 +1,4 @@
-package com.example.sondouni.ch10;
+package com.example.sondouni.ch10.boxofficemodel;
 
 import java.util.List;
 

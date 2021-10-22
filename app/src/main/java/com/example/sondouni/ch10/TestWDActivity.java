@@ -16,7 +16,7 @@ import com.example.sondouni.R;
 import com.example.sondouni.Utils;
 import com.example.sondouni.ch10.boxofficemodel.BoxOfficeResultBodyVO;
 import com.example.sondouni.ch10.boxofficemodel.BoxOfficeResultVO;
-import com.example.sondouni.ch10.boxofficemodel.DailyBoxOfficeVO;
+import com.example.sondouni.ch10.boxofficemodel.WeeklyBoxOfficeVO;
 
 import java.util.List;
 
@@ -26,24 +26,21 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class DailyBoxOfficeActivity extends AppCompatActivity {
-    private DailyBoxofficeAdapter adapter;
+public class TestWDActivity extends AppCompatActivity {
+    private WTBoxofficeAdapter adapter;
     private DatePicker dpTargetDt;
 
     private RecyclerView rvList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily_box_office);
-        adapter = new DailyBoxofficeAdapter();
+        adapter = new WTBoxofficeAdapter();
 
         dpTargetDt = findViewById(R.id.dpTargetDt);
         rvList = findViewById(R.id.rvList);
         rvList.setAdapter(adapter);
-
     }
-
     private void network(String targetDt) {
 
         Retrofit rf = new Retrofit.Builder()
@@ -54,9 +51,10 @@ public class DailyBoxOfficeActivity extends AppCompatActivity {
 
         KobisService service = rf.create(KobisService.class);
         final String KEY = "71ebaabe99c41b10686133dae485862a";
-        Call<BoxOfficeResultBodyVO> call = service.boxofficeSerchDailyBoxOfficeList(KEY, targetDt);
+        final String weekGb = "1";
+        Call<BoxOfficeResultBodyVO> call = service.boxofficeSerchWeeklyBoxOfficeList1(KEY, targetDt);
 
-        call.enqueue(new Callback<BoxOfficeResultBodyVO>() {//비동기처리
+        call.enqueue(new Callback<BoxOfficeResultBodyVO>() {
             @Override
             public void onResponse(Call<BoxOfficeResultBodyVO> call, Response<BoxOfficeResultBodyVO> res) {
                 if (res.isSuccessful()) {
@@ -65,7 +63,7 @@ public class DailyBoxOfficeActivity extends AppCompatActivity {
 
                     BoxOfficeResultBodyVO vo1 = res.body();
                     BoxOfficeResultVO resultVo = vo1.getBoxOfficeResultVO();
-                    List<DailyBoxOfficeVO> list = resultVo.getDailyBoxOfficeVOList();
+                    List<WeeklyBoxOfficeVO> list = resultVo.getWeeklyBoxOfficelist();
 
 //                    Log.i("myLog", list.size() + "개"); //-> 위에것을 풀어쓰기
                     adapter.setList(list);
@@ -80,12 +78,11 @@ public class DailyBoxOfficeActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<BoxOfficeResultBodyVO> call, Throwable t) {
-                Log.d("myLog", "response Fail");
 
             }
         });
-    }
 
+    }
     public void clkSearch(View v) {
         int day = dpTargetDt.getDayOfMonth();
         int mon = dpTargetDt.getMonth() + 1;
@@ -109,9 +106,9 @@ public class DailyBoxOfficeActivity extends AppCompatActivity {
 //        Log.i("myLog",date.toString()); -> java 캘린더 클래스
     }
 }
-class DailyBoxofficeAdapter extends RecyclerView.Adapter<DailyBoxofficeAdapter.MyViewHolder>{
-    private List<DailyBoxOfficeVO> list;
-    public void setList(List<DailyBoxOfficeVO> list){
+class WTBoxofficeAdapter extends RecyclerView.Adapter<WTBoxofficeAdapter.MyViewHolder>{
+    private List<WeeklyBoxOfficeVO> list;
+    public void setList(List<WeeklyBoxOfficeVO> list){
         this.list = list;
     }
 
@@ -143,12 +140,10 @@ class DailyBoxofficeAdapter extends RecyclerView.Adapter<DailyBoxofficeAdapter.M
             tvTitle = v.findViewById(R.id.tvTitle);
             tvAudienceCnt = v.findViewById(R.id.tvAudienceCnt);
         }
-        public void setItem(DailyBoxOfficeVO vo){
+        public void setItem(WeeklyBoxOfficeVO vo){
             tvTitle.setText(vo.getMovieNm());
             tvAudienceCnt.setText(Utils.getNumberComma(vo.getAudiCnt())+"명");
             Log.i("myLog","11111");
         }
     }
 }
-
-
