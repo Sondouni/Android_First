@@ -1,6 +1,7 @@
 package com.example.sondouni.ch10;
 
 import com.example.sondouni.ch10.boxofficemodel.BoxOfficeResultBodyVO;
+import com.example.sondouni.ch10.searchmoviemodel.MovieInfoResultBodyVO;
 import com.example.sondouni.ch10.searchmoviemodel.MovieListResultBodyVO;
 
 import retrofit2.Call;
@@ -23,5 +24,11 @@ public interface KobisService {
             ,@Query("targetDt") String targetDt);
     //영화목록
     @GET("movie/searchMovieList.json?key="+KEY)
-    Call<MovieListResultBodyVO> movieSearchList();
+    Call<MovieListResultBodyVO> movieSearchList(@Query("itmePerPage") String itemPerPage,
+                                                @Query("curPage") String curPage);
+    //영화 디테일
+    //@GET("movie/searchMovieInfo.json?key="+KEY)
+    //Call<>
+    @GET("movie/searchMovieInfo.json?key="+KEY)
+    Call<MovieInfoResultBodyVO> searchMovieInfo(@Query("movieCd") String movieCd);
 }
