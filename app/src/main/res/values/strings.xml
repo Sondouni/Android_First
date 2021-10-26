@@ -7,6 +7,13 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="tv_01">TextView01</string>
+
+    <string name="actor_label_1">ActorName</string>
+    <string name="actor_label_2">ActorName(eng)</string>
+    <string name="actor_label_3">Casting</string>
+    <string name="actor_label_4">Casting(eng)</string>
+
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_dintent_sub_sactivity">DIntentSubSActivity</string>
